@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Nura Health | Nature is the Algorithm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-fidelity, cinematic landing page for Nura Health. Bridging the gap between biological research and avant-garde luxury.
 
-Currently, two official plugins are available:
+![Nura Health Hero](docs/assets/nura-health-hero.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Aesthetic Identity: "High-End Organic Tech"
+- **Palette:** Moss (#2E4036), Clay (#CC5833), Cream (#F2F0E9), Charcoal (#1A1A1A).
+- **Typography:** Plus Jakarta Sans & Outfit (Sans), Cormorant Garamond (Italic Serif), Fira Code (Mono).
+- **Visuals:** Global Noise overlay, rounded-[3rem] radius system, motion-first architecture.
 
-## React Compiler
+## Core Component Architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### A. The Floating Island (Navbar)
+A fixed, pill-shaped container that transitions from transparent to a white/60 glassmorphic blur upon scroll.
 
-## Expanding the ESLint configuration
+### B. Interactive Functional Artifacts (Features)
+- **Diagnostic Shuffler:** 3 overlapping cards cycling with spring-bounce transitions.
+- **Neural Stream:** Live telemetry typewriter with a pulsing "Live Feed" indicator.
+- **Adaptive Regimen:** Automated SVG cursor interaction with a weekly grid.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### C. Protocol (Sticky Stacking Archive)
+Vertical stack of full-screen cards using GSAP ScrollTrigger. As a new card enters, the previous card scales down, blurs, and fades.
+- **Artifacts:** Rotating double-helix, scanning laser-grid, and pulsing EKG waveform.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technical Implementation
+- **Framework:** React 19
+- **Styling:** Tailwind CSS v4
+- **Animation:** GSAP 3 (ScrollTrigger)
+- **Icons:** Lucide React
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Full Layout Preview
+![Nura Health Full Page](docs/assets/nura-health-full.png)
+
+---
+
+## Development
+```bash
+npm install
+npm run dev
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Open [http://localhost:5173](http://localhost:5173) to view.
